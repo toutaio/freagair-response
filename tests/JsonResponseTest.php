@@ -17,9 +17,9 @@ it('creates a JSON response with encoded body', function (): void {
     /** @var Success<Response> $result */
     $response = $result->value();
 
-    expect($response->statusCode())->toBe(200)
-        ->and($response->body())->toBe('{"key":"value"}')
-        ->and($response->headers())->toBe(['Content-Type' => ['application/json']]);
+    expect($response->statusCode()->value)->toBe(200)
+        ->and($response->body()->value)->toBe('{"key":"value"}')
+        ->and($response->headers()->value)->toBe(['Content-Type' => ['application/json']]);
 });
 
 // Scenario: encode valid data with custom status code and return Success<Response>
@@ -29,7 +29,7 @@ it('creates a JSON response with custom status code', function (): void {
     expect($result)->toBeInstanceOf(Success::class);
 
     /** @var Success<Response> $result */
-    expect($result->value()->statusCode())->toBe(404);
+    expect($result->value()->statusCode()->value)->toBe(404);
 });
 
 // Scenario: return Failure<ResponseError> when json_encode fails
