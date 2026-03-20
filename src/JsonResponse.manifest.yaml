@@ -1,0 +1,9 @@
+aru:
+  address: response.json.build.JsonResponse
+  layer: L2_MOLECULE
+  file: src/JsonResponse.php
+  description: Factory that encodes data as JSON and returns Result<Response, ResponseError>
+  scenarios:
+    - encode valid data and return Success<Response>
+    - encode valid data with custom status code and return Success<Response>
+    - return Failure<ResponseError> when json_encode fails

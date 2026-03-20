@@ -1,0 +1,9 @@
+aru:
+  address: response.ContentType
+  layer: L0_PRIMITIVE
+  file: src/ContentType.php
+  description: Branded type wrapping a content type MIME string
+  scenarios:
+    - create a ContentType from a valid MIME string
+    - two ContentType instances with same value are equal
+    - cast ContentType to string

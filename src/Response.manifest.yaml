@@ -1,0 +1,9 @@
+aru:
+  address: response.http.build.Response
+  layer: L2_MOLECULE
+  file: src/Response.php
+  description: Immutable HTTP response implementing ResponseInterface
+  scenarios:
+    - create a response with status, headers, and body
+    - Response implements ResponseInterface
+    - create a default empty response

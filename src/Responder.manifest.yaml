@@ -1,0 +1,7 @@
+aru:
+  address: response.http.validate.Responder
+  layer: L1_ATOM
+  file: src/Responder.php
+  description: Contract for responders that return Result<ResponseInterface, ResponseError>
+  scenarios:
+    - define a responder that returns a Result<ResponseInterface, ResponseError>

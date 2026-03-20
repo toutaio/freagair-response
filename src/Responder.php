@@ -11,7 +11,7 @@ use Touta\Aria\Runtime\Result;
 interface Responder
 {
     /**
-     * @return Result<ResponseInterface, mixed>
+     * @return Result<ResponseInterface, ResponseError>
      */
     public function respond(RequestInterface $request): Result;
 }

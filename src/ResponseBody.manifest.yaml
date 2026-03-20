@@ -1,0 +1,10 @@
+aru:
+  address: response.ResponseBody
+  layer: L0_PRIMITIVE
+  file: src/ResponseBody.php
+  description: Branded type wrapping a response body string
+  scenarios:
+    - create a ResponseBody from a string
+    - two ResponseBody instances with same value are equal
+    - create an empty ResponseBody
+    - cast ResponseBody to string

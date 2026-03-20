@@ -1,0 +1,11 @@
+aru:
+  address: response.ResponseError
+  layer: L0_PRIMITIVE
+  file: src/ResponseError.php
+  description: Domain-typed error for response operations with code, message, and context
+  scenarios:
+    - create a ResponseError with code and message
+    - create a ResponseError with context
+    - derive a new error with a different message
+    - derive a new error with merged context
+    - error constants match expected codes
